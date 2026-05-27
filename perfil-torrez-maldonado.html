@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Perfil premium dentro de Barrio Digital Inmobiliario.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Perfil Premium | Barrio Digital Inmobiliario</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+color:white;
+background:
+linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.55)),
+url('images/torrez-banner.jpg');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+background-repeat:no-repeat;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:9999;
+padding:18px 6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.32);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(212,175,55,.18);
+}
+
+.nav-logo{
+font-family:'Playfair Display',serif;
+font-size:24px;
+color:#d4af37;
+font-weight:700;
+}
+
+.nav-links{
+display:flex;
+gap:22px;
+flex-wrap:wrap;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:15px;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#d4af37;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+padding:150px 8% 90px;
+display:flex;
+align-items:flex-end;
+background:
+linear-gradient(to top,rgba(0,0,0,.78),rgba(0,0,0,.12)),
+url('images/torrezmaldonado-banner.jpg');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+position:relative;
+overflow:hidden;
+}
+
+.hero-content{
+max-width:850px;
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:72px;
+color:#d4af37;
+margin-bottom:20px;
+text-shadow:0 8px 25px rgba(0,0,0,.55);
+}
+
+.hero p{
+font-size:21px;
+line-height:1.8;
+color:#f1f1f1;
+margin-bottom:30px;
+text-shadow:0 4px 18px rgba(0,0,0,.55);
+}
+
+.profile-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:15px 28px;
+border-radius:40px;
+text-decoration:none;
+font-weight:700;
+transition:.3s;
+}
+
+.btn-gold{
+background:#d4af37;
+color:#000;
+}
+
+.btn-outline{
+border:1px solid rgba(212,175,55,.65);
+color:#d4af37;
+background:rgba(0,0,0,.22);
+backdrop-filter:blur(8px);
+}
+
+.btn:hover{
+transform:translateY(-3px);
+background:#d4af37;
+color:#000;
+box-shadow:0 10px 30px rgba(212,175,55,.35);
+}
+
+/* SECCIONES */
+
+.section{
+padding:90px 8%;
+position:relative;
+z-index:2;
+}
+
+.section-title{
+font-family:'Playfair Display',serif;
+font-size:46px;
+color:#d4af37;
+text-align:center;
+margin-bottom:45px;
+text-shadow:0 4px 15px rgba(0,0,0,.45);
+}
+
+/* ABOUT */
+
+.about-box{
+max-width:1100px;
+margin:auto;
+background:rgba(0,0,0,.34);
+backdrop-filter:blur(6px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:34px;
+padding:50px;
+box-shadow:0 20px 60px rgba(0,0,0,.28);
+}
+
+.about-box p{
+font-size:18px;
+line-height:2;
+color:#f1f1f1;
+}
+
+.zone{
+margin-top:25px;
+color:#d4af37;
+font-weight:700;
+}
+
+/* PROPIEDADES ANCLA */
+
+.anchor-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+gap:35px;
+max-width:1300px;
+margin:auto;
+}
+
+.anchor-card{
+background:rgba(0,0,0,.28);
+backdrop-filter:blur(5px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:34px;
+overflow:hidden;
+box-shadow:0 20px 60px rgba(0,0,0,.28);
+transition:.35s;
+}
+
+.anchor-card:hover{
+transform:translateY(-8px);
+border:1px solid rgba(212,175,55,.42);
+}
+
+.anchor-card img{
+width:100%;
+height:330px;
+object-fit:cover;
+display:block;
+}
+
+.anchor-content{
+padding:35px;
+}
+
+.anchor-content h3{
+font-family:'Playfair Display',serif;
+font-size:34px;
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.price{
+font-size:24px;
+font-weight:700;
+margin-bottom:12px;
+}
+
+.meta{
+color:#ddd;
+margin-bottom:18px;
+}
+
+.anchor-content p{
+line-height:1.8;
+color:#f1f1f1;
+margin-bottom:25px;
+}
+
+/* LISTADO */
+
+.property-list{
+max-width:1200px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:22px;
+}
+
+.property-item{
+display:grid;
+grid-template-columns:180px 1fr auto;
+gap:25px;
+align-items:center;
+background:rgba(0,0,0,.28);
+backdrop-filter:blur(5px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:26px;
+padding:18px;
+box-shadow:0 18px 45px rgba(0,0,0,.25);
+transition:.3s;
+}
+
+.property-item:hover{
+transform:translateY(-4px);
+border:1px solid rgba(212,175,55,.32);
+}
+
+.property-item img{
+width:180px;
+height:125px;
+object-fit:cover;
+border-radius:18px;
+}
+
+.property-item h3{
+font-size:24px;
+color:#d4af37;
+margin-bottom:8px;
+}
+
+.property-item p{
+color:#f1f1f1;
+line-height:1.6;
+}
+
+.property-price{
+font-size:22px;
+font-weight:700;
+color:white;
+white-space:nowrap;
+}
+
+/* CTA FINAL */
+
+.final-cta{
+text-align:center;
+padding-bottom:120px;
+}
+
+.final-cta p{
+max-width:760px;
+margin:0 auto 35px;
+line-height:1.9;
+color:#f1f1f1;
+font-size:18px;
+}
+
+footer{
+padding:35px;
+text-align:center;
+background:rgba(0,0,0,.42);
+backdrop-filter:blur(8px);
+color:#ddd;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px){
+
+.navbar{
+flex-direction:column;
+gap:12px;
+}
+
+.hero h1{
+font-size:44px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.property-item{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.property-item img{
+width:100%;
+height:220px;
+}
+
+.property-price{
+white-space:normal;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="nav-logo">Barrio Digital Inmobiliario</div>
+
+<div class="nav-links">
+<a href="../index.html">Inicio</a>
+<a href="../inmobiliarias.html">Inmobiliarias</a>
+<a href="../asesores.html">Asesores</a>
+<a href="../index.html#mapa">Mapa</a>
+</div>
+</nav>
+
+<header class="hero">
+
+<div class="hero-content">
+
+<h1>Torrez & Maldonado</h1>
+
+<p>
+Firma inmobiliaria enfocada en oportunidades estratégicas de inversión, terrenos comerciales, desarrollos premium y propiedades con visión patrimonial.
+</p>
+
+<div class="profile-buttons">
+<a class="btn btn-gold" href="https://wa.me/523221340289" target="_blank">Contactar por WhatsApp</a>
+<a class="btn btn-outline" href="https://www.facebook.com/TorrezMaldonadoRealEstateSolutions" target="_blank">Visitar catálogo</a>
+</div>
+
+</div>
+
+</header>
+
+<section class="section">
+
+<h2 class="section-title">Perfil inmobiliario</h2>
+
+<div class="about-box">
+
+<p>
+Torrez & Maldonado es una firma inmobiliaria enfocada en conectar inversionistas, compradores y propietarios con oportunidades de valor en zonas estratégicas de crecimiento. Su visión combina análisis de ubicación, plusvalía, presentación digital y acompañamiento personalizado.
+</p>
+
+<p class="zone">
+Zona de atención: Puerto Vallarta · Riviera Nayarit · Tepic · Bahía de Banderas
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Propiedades ancla</h2>
+
+<div class="anchor-grid">
+
+<div class="anchor-card">
+<img src="images/propiedad-ancla-1.jpg" alt="Propiedad ancla 1">
+
+<div class="anchor-content">
+<h3>Reserva El Monteón</h3>
+<p class="price">$1,700 MXN x mt2</p>
+<p class="meta">El Monteón · Terreno · Inversión</p>
+<p>
+Terrenos con visión de crecimiento patrimonial en zona con potencial turístico y desarrollo progresivo.
+</p>
+<a class="btn btn-gold" href="#" target="_blank">Ver propiedad</a>
+</div>
+</div>
+
+<div class="anchor-card">
+<img src="images/propiedad-ancla-2.jpg" alt="Propiedad ancla 2">
+
+<div class="anchor-content">
+<h3>Soleva Puerto Vallarta</h3>
+<p class="price">Desde $--- MXN</p>
+<p class="meta">Marina Vallarta · Departamentos · Preventa</p>
+<p>
+Desarrollo premium con enfoque patrimonial, rentas estratégicas y ubicación consolidada.
+</p>
+<a class="btn btn-gold" href="#" target="_blank">Ver propiedad</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Listado de propiedades</h2>
+
+<div class="property-list">
+
+<div class="property-item">
+<img src="images/propiedad-lista-1.jpg" alt="Propiedad 1">
+<div>
+<h3>Casa Gobernadores</h3>
+<p>Col. Gobernadores · 3 recámaras · 2 baños</p>
+</div>
+<div class="property-price">$2,400,000</div>
+</div>
+
+<div class="property-item">
+<img src="images/propiedad-lista-2.jpg" alt="Propiedad 2">
+<div>
+<h3>Local Allende</h3>
+<p>Zona centro · Local comercial · Bodega</p>
+</div>
+<div class="property-price">$---20,000 x Mes</div>
+</div>
+
+<div class="property-item">
+<img src="images/propiedad-lista-3.jpg" alt="Propiedad 3">
+<div>
+<h3>Terreno Comercial</h3>
+<p>Av. de los Poetas · Uso comercial · Alto flujo</p>
+</div>
+<div class="property-price">$11,000 MXN X MT2</div>
+</div>
+
+<div class="property-item">
+<img src="images/propiedad-lista-4.jpg" alt="Propiedad 4">
+<div>
+<h3>Villa Sol</h3>
+<p>Puerto Vallarta · 3 recámaras · 2.5 baños</p>
+</div>
+<div class="property-price">$4,273,000</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section final-cta">
+
+<h2 class="section-title">Explora más oportunidades</h2>
+
+<p>
+Conoce el catálogo completo de propiedades, terrenos, preventas y oportunidades de inversión disponibles.
+</p>
+
+<div class="profile-buttons" style="justify-content:center;">
+<a class="btn btn-gold" href="https://www.facebook.com/BARRIODIGITALTEPIC" target="_blank">Visitar catálogo</a>
+<a class="btn btn-outline" href="https://wa.me/523221340289" target="_blank">Contactar por WhatsApp</a>
+</div>
+
+</section>
+
+<footer>
+© Barrio Digital Inmobiliario — Perfil premium.
+</footer>
+
+</body>
+</html>
