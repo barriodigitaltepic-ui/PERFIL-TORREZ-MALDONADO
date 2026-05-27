@@ -168,8 +168,8 @@ text-shadow:0 4px 15px rgba(0,0,0,.45);
 .about-box{
 max-width:1100px;
 margin:auto;
-background:rgba(0,0,0,.34);
-backdrop-filter:blur(6px);
+background:rgba(0,0,0,.72);
+backdrop-filter:blur(8px);
 border:1px solid rgba(255,255,255,.08);
 border-radius:34px;
 padding:50px;
@@ -199,8 +199,8 @@ margin:auto;
 }
 
 .anchor-card{
-background:rgba(0,0,0,.28);
-backdrop-filter:blur(5px);
+background:rgba(0,0,0,.72);
+backdrop-filter:blur(8px);
 border:1px solid rgba(255,255,255,.08);
 border-radius:34px;
 overflow:hidden;
@@ -263,8 +263,8 @@ display:grid;
 grid-template-columns:180px 1fr auto;
 gap:25px;
 align-items:center;
-background:rgba(0,0,0,.28);
-backdrop-filter:blur(5px);
+background:rgba(0,0,0,.72);
+backdrop-filter:blur(8px);
 border:1px solid rgba(255,255,255,.08);
 border-radius:26px;
 padding:18px;
@@ -330,8 +330,11 @@ color:#ddd;
 @media(max-width:850px){
 
 body{
+background:
+linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.92)),
+url('images/torrez-banner.jpg');
 background-size:cover;
-background-position:center center;
+background-position:center top;
 background-attachment:scroll;
 }
 
