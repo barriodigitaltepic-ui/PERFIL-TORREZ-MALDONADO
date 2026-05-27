@@ -329,17 +329,84 @@ color:#ddd;
 
 @media(max-width:850px){
 
+body{
+background-attachment:scroll;
+}
+
 .navbar{
+position:absolute;
 flex-direction:column;
+gap:12px;
+padding:15px 5%;
+}
+
+.nav-logo{
+font-size:20px;
+text-align:center;
+}
+
+.nav-links{
+justify-content:center;
 gap:12px;
 }
 
+.nav-links a{
+font-size:13px;
+}
+
+.hero{
+min-height:100vh;
+padding:180px 6% 70px;
+background-attachment:scroll;
+}
+
 .hero h1{
-font-size:44px;
+font-size:40px;
+line-height:1.05;
 }
 
 .hero p{
-font-size:17px;
+font-size:16px;
+line-height:1.7;
+}
+
+.profile-buttons{
+justify-content:center;
+}
+
+.btn{
+width:100%;
+max-width:310px;
+text-align:center;
+}
+
+.section{
+padding:65px 5%;
+}
+
+.section-title{
+font-size:34px;
+}
+
+.about-box{
+padding:28px;
+}
+
+.anchor-grid{
+grid-template-columns:1fr;
+gap:28px;
+}
+
+.anchor-card img{
+height:240px;
+}
+
+.anchor-content{
+padding:28px;
+}
+
+.anchor-content h3{
+font-size:28px;
 }
 
 .property-item{
@@ -354,6 +421,7 @@ height:220px;
 
 .property-price{
 white-space:normal;
+font-size:20px;
 }
 
 }
